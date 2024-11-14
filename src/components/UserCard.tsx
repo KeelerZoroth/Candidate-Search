@@ -27,7 +27,7 @@ const UserCard = ({candidate}: {candidate: Candidate}) => {
     return(
         <div style={styles.mainDiv}>
             <img src={candidate.avatar_url} style={styles.img} alt="avatar of github user" />
-            <h2 style={styles.h2}>{candidate.login}({candidate.name ? candidate.name : candidate.login})</h2>
+            <h2 style={styles.h2}>{candidate.login} ({candidate.name ? candidate.name : candidate.login})</h2>
             <div style={styles.subDiv}>
                 <p><strong>Email:</strong> {candidate.email ? candidate.email : (<em>No Email</em>)}</p>
                 <p><strong>Location:</strong> {candidate.location ? candidate.location : (<em>No Location</em>)}</p>
