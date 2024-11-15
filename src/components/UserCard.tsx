@@ -9,6 +9,7 @@ const UserCard = ({candidate}: {candidate: Candidate}) => {
             background: "linear-gradient(rgb(20, 20, 220) 25%, rgb(0, 0, 100))",
             borderRadius: "10px",
             overflow: "hidden",
+            overflowWrap: "break-word",
             width: "100%",
             maxWidth: "350px",
             margin: "0px auto",

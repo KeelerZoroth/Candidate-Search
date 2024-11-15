@@ -29,6 +29,9 @@ const SavedCandidates = () => {
       width: "45px",
       height: "45px",
       fontSize: "25px",
+    },
+    th:{
+      overflowWrap: "break-word",
     }
   };
   
@@ -56,15 +59,15 @@ const SavedCandidates = () => {
             return (
               <tr key={indexKey}>
                 <th scope="row"><div style={styles.divImg}><img src={nextCandidate.avatar_url} style={styles.thImg} alt="user avatar" /></div></th>
-                <th>
+                <th style={styles.th}>
                   <p>{nextCandidate.login}</p>
                   <p>({nextCandidate.name ? nextCandidate.name : nextCandidate.login})</p>
                 </th>
-                <th>{nextCandidate.email ? nextCandidate.email : (<em>No Email</em>)}</th>
-                <th>{nextCandidate.location ? nextCandidate.location : (<em>No Location</em>)}</th>
-                <th>{nextCandidate.company ? nextCandidate.company : (<em>No Company</em>)}</th>
-                <th>{nextCandidate.bio ? nextCandidate.bio : (<em>No Bio</em>)}</th>
-                <th><button style={styles.rejectBtn} onClick={() => {removeCandidate(indexKey)}}>-</button></th>
+                <th style={styles.th}>{nextCandidate.email ? nextCandidate.email : (<em>No Email</em>)}</th>
+                <th style={styles.th}>{nextCandidate.location ? nextCandidate.location : (<em>No Location</em>)}</th>
+                <th style={styles.th}>{nextCandidate.company ? nextCandidate.company : (<em>No Company</em>)}</th>
+                <th style={styles.th}>{nextCandidate.bio ? nextCandidate.bio : (<em>No Bio</em>)}</th>
+                <th style={styles.th}><button style={styles.rejectBtn} onClick={() => {removeCandidate(indexKey)}}>-</button></th>
               </tr>  
             )})}
         </tbody>
